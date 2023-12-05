@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Ensueño - Restaurante</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link th:href="@{/img/favicon.ico}" href="../static/img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link th:href="@{/css/styles.css}" rel="stylesheet"> 
+		<link th:href="'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap'" rel="stylesheet">
+
+        
+        <!-- Font Awesome -->
+        <link th:href="'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'" rel="stylesheet">
+
+
+        <!-- Libraries Stylesheet -->
+        <link th:href="@{/lib/owlcarousel/assets/owl.carousel.min.css}" href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link th:href="@{/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css}" href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link th:href="@{/css/style.min.css}" href="../static/css/style.min.css" rel="stylesheet">
+    </head>
+    
+    <!-- Reservation Start -->
+    <div class="container-fluid my-5">
+        <div class="container">
+            <div class="reservation position-relative overlay-top overlay-bottom" style="background-image: url('/img/reserva_1.jpg');">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="text-center p-5" style="background: rgba(255, 255, 255, 0.9); border-radius: 10px;">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <a th:href="@{/home/principal}" >
+                                    <i class="fa fa-arrow-circle-left fa-2x"></i>
+                                </a>
+                                <img src="/img/logo.png" alt="Logo" style="width: 100px; height: 100px; margin: 0 auto;">
+                                <a th:href="@{/home/reservas/form_reserva/login}">
+                                    <i class="fa fa-user fa-2x"></i>
+                                </a>
+                            </div>
+                            <h1 class="text-dark mb-4 mt-2">Reserva Ahora</h1>
+                            <form class="mb-5">
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-light border-0 p-4" placeholder="Nombre" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select bg-light border-0 px-4" style="height: 49px;">
+                                        <option selected>Ambiente</option>
+                                        <option value="1">Ambiente 1</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control bg-light border-0 px-4" id="cantidad" placeholder="Ingrese la cantidad de comensales" min="1" max="10" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select bg-light border-0 px-4" style="height: 49px;">
+                                        <option selected>Tipo de Evento</option>
+                                        <option value="1">Ambiente 1</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" class="form-control bg-light border-0 p-4" id="date" placeholder="Ingrese la fecha" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <input type="time" class="form-control bg-light border-0 p-4" id="time" placeholder="Ingrese la hora" required="required">
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit" style="color: white;">Enviar Reservar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reservation End -->
